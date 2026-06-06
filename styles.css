@@ -1,0 +1,592 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.section-1{
+    display: flex;
+    flex-direction: column;
+    background-image: url('https://i.pinimg.com/736x/29/e4/c2/29e4c2274e59df8d17084757bc39b6fa.jpg');
+}
+
+.nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo h1{
+    font-family: 'Bebas Neue';
+    font-size: clamp(15px, 5vw, 30px);
+}
+
+.nav-bar ul{
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-bar ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Barlow Condensed';
+}
+
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    color: white;
+}
+
+.hero h1{
+    font-family: 'Bebas Neue';
+    width: min(55%, 90%);
+    font-size: clamp(30px, 6vw, 80px);
+    text-align: center;
+    line-height: 1.1;
+}
+
+.hero p{
+    font-family: 'Barlow Condensed';
+    font-size: clamp(15px, 5vw, 20px);
+
+}
+
+.button{
+    display: flex;
+    gap: 10px;
+}
+
+.button button{
+    margin-top: 20px;
+    padding: 10px 3vw;
+}
+
+.button button:nth-child(1){
+    border: 1px solid white;
+    background-color: white;
+    font-family: 'Barlow Condensed';
+}
+
+.button button:nth-child(2){
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    font-family: 'Barlow Condensed';
+}
+
+.banner{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.banner h1{
+    text-align: center;
+    font-family: 'Barlow Condensed';
+
+}
+
+.box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.box-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 250px;
+    padding: 0 30px;
+    font-family: 'Barlow Condensed';
+    text-align: center;
+    border-radius: 10px;
+}
+
+.brands{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Barlow Condensed';
+    margin-top: 20px;
+}
+
+.brands h1{
+    text-align: center;
+}
+
+.brand-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 95%;
+    margin: 20px auto;
+}
+
+.brand{
+    height: 200px;
+    overflow: hidden;
+}
+
+.brand img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.new-arrival{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Barlow Condensed';
+    margin-top: 20px;
+}
+
+.new-arrival h1{
+    text-align: center;
+}
+
+.latest-products{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 95%;
+    margin: 20px auto;
+}
+
+.latest-product{
+    height: 500px;
+    overflow: hidden;
+}
+
+.latest-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    z-index: 3;
+    color: white;
+}
+
+.latest-text a{
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    width: 50%;
+    padding: 5px 0;
+    margin-top: 10px;
+    border: 1px solid white;
+    transition: 0.2s ease-in;
+}
+
+.latest-text a:hover{
+    background-color: white;
+    color: black;
+}
+
+.latest-product:hover::before{
+    display: none;
+}
+
+.latest-product img{
+    height: 80%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.all-products{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Barlow Condensed';
+}
+
+.all-products h1{
+    text-align: center;
+}
+
+.all-products h2{
+    margin-top: 20px;
+    margin-left: 5vw;
+}
+
+.nike,
+.adidas,
+.puma,
+.new-balance{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    width: 90%;
+    scroll-margin-top: 40px;
+    margin: 10px auto;
+}
+
+
+.shoes{
+    height: 430px;
+    overflow: hidden;
+}
+
+.shoes img{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+
+.shoes-text{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.shoes-name{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.shoes-name button{
+    background-color: rgba(241, 206, 51, 0.193);
+    padding: 5px;
+    width: 80px;
+    border-radius: 6px;
+    color: white;
+    border: 1px solid orange;
+}
+
+.about-us{
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid gray;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 40px;
+
+}
+
+.about-us-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about-us-text h1{
+    font-weight: 800;
+    font-family: 'Bebas Neue';
+    font-size: clamp(40px, 4vw, 60px);
+}
+
+.about-us-text h1 sup{
+    color: red;
+}
+
+.about-us-text p{
+    text-transform: uppercase;
+    font-family: 'Barlow Condensed';
+    font-size: clamp(15px, 3vw, 22px);
+}
+
+.about-us-content{
+    display: flex;
+    margin-top: 20px;
+    gap:3rem;
+}
+
+.about-us-content h1{
+    font-family: 'Bebas Neue';
+}
+
+.about-story{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 15px;
+}
+
+.about-story p{
+    font-family: 'Barlow Condensed';
+}
+
+.about-value{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 20px;
+}
+
+.card-value{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.378);
+    border-radius: 5px;
+    background-color: rgba(128, 128, 128, 0.342);
+}
+
+.card-value-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Barlow Condensed';
+}
+
+.card-value-header p{
+    color: red;
+}
+
+.card-value small{
+    font-family: 'Barlow Condensed';
+    color: gray;
+}
+
+.contact-us{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.contact-us-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-us-text h1{
+    font-weight: 800;
+    font-family: 'Bebas Neue';
+    font-size: clamp(40px, 4vw, 60px);
+}
+
+.contact-us-text h1 sup{
+    color: red;
+}
+
+.contact-us-text p{
+    text-transform: uppercase;
+    font-family: 'Barlow Condensed';
+    font-size: clamp(15px, 3vw, 22px);
+}
+
+.contact-us-content{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+.contact-info{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 15px;
+}
+
+
+.contact-info p,
+.contact-info h1{
+    font-family: 'Barlow Condensed';
+}
+
+.contact-us-input{
+    display: flex;
+    font-family: 'Barlow Condensed';
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 10px;
+}
+
+.contact-us-input input{
+    height: 35px;
+    background-color: rgba(128, 128, 128, 0.438);
+    border: none;
+    color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 0 20px;
+}
+
+.contact-us-input textarea{
+    height: 80px;
+    background-color: rgba(128, 128, 128, 0.438);
+    border: none;
+    color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 0 20px;
+}
+
+.contact-us-input button{
+    height: 35px;
+    background-color: white;
+    border: none;
+    color: black;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 0 20px;
+}
+
+.footer{
+    margin-top: 40px;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: spa;
+    width: 95%;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.footer-brand{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.footer-brand h1{
+    font-family: "Bebas Neue";
+}
+
+.footer-brand sup{
+    color: red;
+}
+
+.footer-brand p{
+    font-family: 'Barlow Condensed';
+}
+
+.footer-links{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.footer-column ul{
+    font-family: 'Barlow Condensed';
+    list-style: none;
+}
+
+.footer-column h3{
+    font-family: 'Barlow Condensed';
+}
+
+.footer-column ul li a{
+    text-decoration: none;
+    color: gray;
+}
+
+.footer-bottom{
+    display: flex;
+}
+
+.footer-bottom-container{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    padding: 10px 0;
+    margin: 0 auto;
+    font-family: 'Barlow Condensed';
+    border-top: 1px solid gray;
+}
+
+.footer-legal a{
+    text-decoration: none;
+    color: gray;
+}
+
+@media(max-width:768px){
+    .hero h1{
+        width: 90%;
+        font-size: clamp(28px, 8vw, 55px);
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .footer-links {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .footer-bottom-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .footer-legal a {
+        margin-left: 0;
+        margin-right: 20px;
+    }
+
+    .about-us-content{
+        flex-direction: column;
+    }
+
+    .about-story{
+        width: 100%;
+    }
+
+    .contact-us-content{
+        flex-direction: column;
+    }
+
+    .footer-container{
+        flex-direction: column;
+    }
+
+    .footer-brand{
+        width: 100%;
+    }
+
+    .footer-links{
+        width: 100%;
+    }
+}
+
+@media(max-width:475px){
+    .nav-bar{
+        flex-direction: column;
+    }
+}
